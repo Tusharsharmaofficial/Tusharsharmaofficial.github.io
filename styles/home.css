@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bungee", "Montserrat", sans-serif;
   background: url("/assets/backdrop.jpeg") no-repeat center top /cover,
     linear-gradient(120deg, #e2eafc 0%, #fff 100%);
   min-height: 100vh;
@@ -198,15 +198,15 @@ nav .container {
   text-decoration: none;
   font-family: "Bungee", sans-serif;
   font-size: 1.08rem;
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  transition: background var(--transition), color var(--transition);
+  
   width: 12vw;
 }
 .Bio a:hover, .Bio a:focus {
-  background: var(--primary-color);
-  color: var(--white);
+  transform: scale(105%);
 }
 
 /* SONGS SECTION */
@@ -243,17 +243,35 @@ nav .container {
 
 /* FOOTER */
 footer {
+  font-family: "Story-script";
+  font-weight: 400;
+  font-size: 1.2rem;
   background: var(--primary-color);
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   text-align: center;
   color: var(--white);
   margin-top: 3rem;
-  border-radius: var(--radius) var(--radius) 0 0;
+  /* border-radius: var(--radius) var(--radius) 0 0; */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
 }
+.copyright-text{
+    padding-top: 0.5rem;
+}
+.copyright-text a{
+    text-decoration: none;
+    color: #686d77;
+}
+/* .copyright-text p{
+    margin-bottom: 2rem;
+} */
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-top: 0.5rem;
 }
 .social-link {
@@ -261,6 +279,7 @@ footer {
   font-size: 2rem;
   transition: transform var(--transition), color var(--transition);
   display: inline-block;
+  /* height: 1vh; */
 }
 .social-link:hover {
   color: var(--accent-color);

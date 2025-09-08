@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Story+Script&display=swap");
+
+:root {
+  --primary-color: rgb(35, 39, 47);
+  --accent-color: #e2d9c3;
+  --highlight: #0056d6;
+  --light-bg: #f5f7fa;
+  --white: #fff;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+      to right,
+      rgba(35, 39, 47, 0.4),
+      rgba(35, 39, 47, 0.97) 70%
+    ),
+    url("/assets/backdrop.jpeg") no-repeat center top / cover;
+  min-height: 100vh;
+  color: var(--primary-color);
+}
+
+/* NAVBAR */
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 54px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition);
+}
+.logo img:hover {
+  transform: scale(1.08);
+}
+
+.page-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.page-links a {
+  text-decoration: none;
+  font-family: "Bungee", sans-serif;
+  font-size: 1.08rem;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background var(--transition), color var(--transition);
+}
+.page-links a:hover,
+.page-links a:focus {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Hamburger menu icon */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background: var(--white);
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+  transition: left var(--transition);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar .page-links {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+.sidebar .page-links a {
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  font-family: "Bungee", sans-serif;
+  transition: background var(--transition), color var(--transition);
+}
+.sidebar .page-links a:hover,
+.sidebar .page-links a:focus {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/*MAIN BODY*/
+ main {
+  min-height: 700px;
+    font-family: "Bungee", "Story-script";
+}
+.about-box {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    width: 40vw;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: white;
+    font-size: 2rem;
+    float: right;
+    min-height: 500px;
+    justify-content: space-between;
+}
+.about-box .about-para{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.about-box .about-para p{
+    /* margin-top: 1rem ; */
+    line-height: 1.7rem;
+}
+/* FOOTER */
+footer {
+  font-family: "Story-script";
+  font-weight: 400;
+  font-size: 1.2rem;
+  background: var(--primary-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--white);
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.copyright-text{
+    padding-top: 0.5rem;
+}
+.copyright-text a{
+    text-decoration: none;
+    color: #686d77;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+.social-link {
+  color: var(--white);
+  font-size: 2rem;
+  transition: transform var(--transition), color var(--transition);
+  display: inline-block;
+  /* height: 1vh; */
+}
+.social-link:hover {
+  color: var(--accent-color);
+  transform: scale(1.18) rotate(-8deg);
+}
+/* Desktop nav links and hide sidebar/hamburger */
+@media (min-width: 901px) {
+  .page-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    position: static;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+}
