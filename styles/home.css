@@ -19,17 +19,12 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: url("/assets/backdrop.jpeg") no-repeat center top 100px/cover,
+  background: url("/assets/backdrop.jpeg") no-repeat center top /cover,
     linear-gradient(120deg, #e2eafc 0%, #fff 100%);
   min-height: 100vh;
   color: var(--primary-color);
 }
-/*main {
-  background: url("/assets/backdrop.jpeg") no-repeat center/cover,
-    linear-gradient(120deg, #e2eafc 0%, #fff 100%);
-  min-height: 100vh;
-  color: var(--primary-color);
-} */
+
 /* NAVBAR */
 header {
   background: var(--white);
@@ -73,22 +68,10 @@ nav .container {
   border-radius: 8px;
   transition: background var(--transition), color var(--transition);
 }
-main button {
-  border: black 1px solid;
-  font-family: "Bungee", sans-serif;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-  height: 2.5rem;
-  width: 10rem;
-  border-radius: 5%;
-}
-main button:hover {
-  background: var(--highlight);
-  color: var(--white);
-}
+
 .page-links a:hover,
 .page-links a:focus {
-  background: var(--highlight);
+  background: var(--primary-color);
   color: var(--white);
 }
 
@@ -153,7 +136,7 @@ main button:hover {
 
 .Bio h2 {
   font-family: "Bungee", sans-serif;
-  color: var(--highlight);
+  color: var(--primary-color);
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin: 0;
@@ -165,20 +148,20 @@ main button:hover {
   color: #444;
 }
 
-.Bio a {
-  color: var(--highlight);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  border-bottom: 2px solid var(--highlight);
-  transition: color var(--transition), border-color var(--transition);
-  margin-top: 0.5rem;
+.Bio a{
+    text-decoration: none;
+  font-family: "Bungee", sans-serif;
+  font-size: 1.08rem;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background var(--transition), color var(--transition);
+  width : 12vw;
 }
-.Bio a:hover {
-  color: #0033a0;
-  border-color: #0033a0;
+.Bio a:hover, .Bio a:focus{
+ background: var(--primary-color);
+  color: var(--white);
 }
-
 /* SONGS SECTION */
 .songs {
   padding: 3rem 7%;
@@ -196,7 +179,7 @@ main button:hover {
 
 .songs h2 {
   font-family: "Bungee", sans-serif;
-  color: var(--highlight);
+  color: var(--primary-color);
   margin-bottom: 2rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -229,8 +212,8 @@ footer {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 3rem;
+  margin-top: 0.5rem;
 }
 
 .social-link {
