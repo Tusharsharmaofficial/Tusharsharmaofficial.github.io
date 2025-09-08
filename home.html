@@ -11,206 +11,7 @@
       class="favicon"
     />
     <!-- Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Story+Script&display=swap");
-
-      :root {
-        --primary-color: #2c2c2c;
-        --accent-color: #d2c7a8;
-        --highlight: #0033a0; /* deep blue highlight */
-        --light-bg: #f9f9f9;
-        --white: #ffffff;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Montserrat", sans-serif;
-        background-image: url("assets/backdrop.jpeg"); /*replace with your image path*/
-        background-size: cover; /* make sure image covers whole screen */
-        background-position: center; /* center the image */
-        background-repeat: no-repeat; /* prevent tiling */
-        height: 100vh;
-      }
-
-      /* NAVBAR */
-      header {
-        background: var(--white);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
-
-      nav .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 5%;
-      }
-
-      .logo img {
-        height: 50px;
-        border-radius: 50%;
-      }
-
-      .page-links {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-      }
-
-      .page-links a {
-        text-decoration: none;
-        font-family: "Bungee", sans-serif;
-        font-size: 1rem;
-        color: var(--primary-color);
-        transition: color 0.3s ease;
-      }
-
-      .page-links a:hover {
-        color: var(--highlight);
-      }
-
-      /* HERO HEADING */
-      .name-heading {
-        text-align: center;
-        padding: 5rem 2rem;
-        background: url("assets/backdrop.jpg") no-repeat center/cover;
-      }
-
-      .name-heading h1 {
-        font-family: "Story Script", cursive;
-        font-size: 4rem;
-        color: var(--white);
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-      }
-
-      /* BIO SECTION */
-      .Bio {
-        background: var(--white);
-        padding: 3rem 8%;
-        margin: 2rem auto;
-        max-width: 900px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .Bio h2 {
-        font-family: "Bungee", sans-serif;
-        margin-bottom: 1rem;
-        color: var(--highlight);
-        display: block;
-      }
-
-      .Bio p {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-      }
-
-      /* SONGS SECTION */
-      .songs {
-        padding: 3rem 8%;
-        text-align: center;
-      }
-
-      .songs h2 {
-        font-family: "Bungee", sans-serif;
-        color: var(--highlight);
-        margin-bottom: 2rem;
-        display: block;
-      }
-
-      .songs-box {
-        background: var(--white);
-        padding: 2rem;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .songs-wrapper iframe {
-        border-radius: 12px;
-        max-width: 100%;
-      }
-
-      /* FOOTER */
-      footer {
-        background: var(--primary-color);
-        padding: 2rem;
-        text-align: center;
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-      }
-
-      .social-link {
-        color: var(--white);
-        font-size: 1.5rem;
-        transition: transform 0.3s ease, color 0.3s ease;
-      }
-
-      .social-link:hover {
-        color: var(--highlight);
-        transform: scale(1.2);
-      }
-
-      /* RESPONSIVE */
-      @media (max-width: 768px) {
-        .page-links {
-          display: none;
-          flex-direction: column;
-          gap: 1rem;
-          background: var(--white);
-          padding: 1rem;
-          position: absolute;
-          right: 5%;
-          top: 70px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .page-links.active {
-          display: flex;
-        }
-
-        .menu-toggle {
-          display: block;
-          cursor: pointer;
-          font-size: 1.8rem;
-          color: var(--primary-color);
-        }
-      }
-
-      @media (min-width: 769px) {
-        .menu-toggle {
-          display: none;
-        }
-      }
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.createElement("div");
-        toggle.classList.add("menu-toggle");
-        toggle.innerHTML = "☰";
-        document.querySelector("nav .container").appendChild(toggle);
-
-        const links = document.querySelector(".page-links");
-        toggle.addEventListener("click", () => {
-          links.classList.toggle("active");
-        });
-      });
-    </script>
+    <link rel="stylesheet" href="styles/home.css" />
   </head>
   <body>
     <header>
@@ -230,35 +31,27 @@
     </header>
 
     <main>
-      <div class="name-heading">
-        <h1>Tushar Sharma</h1>
-      </div>
-      <div class="Bio">
-        <h2>BIO</h2>
-        <p>
-          Hello this is Tushar Sharma – a singer, anchor, host, voice-over
-          artist, and performer who lives and breathes music. 🎶 For me, music
-          is a way to connect, inspire, and share emotions.
-        </p>
-        <p>
-          Along with singing, I also shine as an anchor and presenter, bringing
-          passion and energy to every stage. Off stage, I’m a medical student,
-          blending compassion with creativity – a journey of medicine and
-          melodies.
-        </p>
-        <p>
-          On YouTube and social media, I share songs, covers, and creative
-          videos, vlogs, building a growing community of listeners. This is just
-          the beginning of my musical journey!
-        </p>
-        <p>
-          👉 If you love music with heart and energy, you’re in the right place.
-          Let’s vibe together!🎤💫
-        </p>
+      <div class="main-content">
+        <div class="name-heading">
+          <h1>Tushar Sharma</h1>
+        </div>
+        <div class="Bio">
+          <div class="bio-header">
+            <img src="assets/logo.jpg" alt="Tushar Sharma" class="bio-avatar" />
+            <h2>BIO</h2>
+          </div>
+          <p>
+            Hello, I'm Tushar Sharma – a singer, anchor, host, voice-over
+            artist, and performer who......
+          </p>
+          <button type="button" onclick="window.location.href='about.html'">
+            Read full bio
+          </button>
+        </div>
       </div>
       <div class="songs">
+        <h2>Latest Release..</h2>
         <div class="songs-box">
-          <h2>Songs</h2>
           <div class="songs-wrapper">
             <iframe
               width="560"
@@ -302,4 +95,5 @@
       </div>
     </footer>
   </body>
+  <script src="scripts/home.js"></script>
 </html>
