@@ -1,11 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.createElement("div");
-  toggle.classList.add("menu-toggle");
-  toggle.innerHTML = "☰";
-  document.querySelector("nav .container").appendChild(toggle);
+  const menuToggle = document.getElementById("menuToggle");
+  const sidebar = document.getElementById("sidebar");
 
-  const links = document.querySelector(".page-links");
-  toggle.addEventListener("click", () => {
-    links.classList.toggle("active");
+  document.getElementById('menuToggle').onclick = function() {
+    document.getElementById('sidebar').classList.toggle('active');
+  };
+
+  // Optional: close sidebar when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      sidebar.classList.contains("active") &&
+      !sidebar.contains(e.target) &&
+      e.target !== menuToggle
+    ) {
+      sidebar.classList.remove("active");
+    }
   });
 });

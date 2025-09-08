@@ -1,3 +1,4 @@
+/* --- OPTIMIZED & CLEANED CSS --- */
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Story+Script&display=swap");
 
 :root {
@@ -38,7 +39,7 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem ;
+  padding: 1.2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -68,28 +69,80 @@ nav .container {
   border-radius: 8px;
   transition: background var(--transition), color var(--transition);
 }
-
 .page-links a:hover,
 .page-links a:focus {
   background: var(--primary-color);
   color: var(--white);
 }
 
-/* HERO HEADING */
-.name-heading {
-  order: 2; /* Place after Bio */
-  flex: 2;
-  text-align: right;
-  padding: 5rem 2rem 2rem 2rem;
-  border-radius: var(--radius);
-  margin: 2rem 0 0 0;
-  min-width: 320px;
-  position: relative;
-  z-index: 1;
-  background: transparent;
-  align-self: flex-end; /* Push to right */
+/* Hamburger menu icon */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  z-index: 1100;
 }
 
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background: var(--white);
+  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+  transition: left var(--transition);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar .page-links {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+.sidebar .page-links a {
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  font-family: "Bungee", sans-serif;
+  transition: background var(--transition), color var(--transition);
+}
+.sidebar .page-links a:hover,
+.sidebar .page-links a:focus {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* HERO HEADING & BIO */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 7%;
+  position: relative;
+  z-index: 2;
+}
+.name-heading {
+  order: 1;
+  align-self: flex-end;
+  text-align: right;
+  margin-top: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
+  border-radius: var(--radius);
+  min-width: 320px;
+  background: transparent;
+}
 .name-heading h1 {
   font-family: "Story Script", cursive;
   font-size: 4.2rem;
@@ -98,33 +151,29 @@ nav .container {
   letter-spacing: 2px;
   margin-bottom: 0;
 }
-
-/* BIO SECTION */
 .Bio {
-  flex: 1;
+  order: 2;
+  align-self: flex-end;
+  margin: 0.5rem 1.5rem 2rem 0;
+  max-width: 340px;
   background: rgba(255, 255, 255, 0.92);
   padding: 2.5rem 2rem 2rem 2rem;
-  margin: 1rem 0 2rem 0;
-  max-width: 340px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: left; /* Align bio to right */
+  align-items: flex-start;
   position: relative;
   z-index: 2;
   backdrop-filter: blur(2px);
-  align-self: flex-end; /* Push to right */
 }
-
 .bio-header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
-
 .bio-avatar {
   width: 48px;
   height: 48px;
@@ -133,7 +182,6 @@ nav .container {
   object-fit: cover;
   border: 2px solid var(--highlight);
 }
-
 .Bio h2 {
   font-family: "Bungee", sans-serif;
   color: var(--primary-color);
@@ -141,27 +189,26 @@ nav .container {
   letter-spacing: 1px;
   margin: 0;
 }
-
 .Bio p {
   margin-bottom: 0.5rem;
   font-size: 1.08rem;
   color: #444;
 }
-
-.Bio a{
-    text-decoration: none;
+.Bio a {
+  text-decoration: none;
   font-family: "Bungee", sans-serif;
   font-size: 1.08rem;
   color: var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: background var(--transition), color var(--transition);
-  width : 12vw;
+  width: 12vw;
 }
-.Bio a:hover, .Bio a:focus{
- background: var(--primary-color);
+.Bio a:hover, .Bio a:focus {
+  background: var(--primary-color);
   color: var(--white);
 }
+
 /* SONGS SECTION */
 .songs {
   padding: 3rem 7%;
@@ -170,29 +217,24 @@ nav .container {
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   width: 80vw;
-  margin: 0 auto; /* Center the songs section horizontally */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content vertically */
-
+  align-items: center;
 }
-
 .songs h2 {
   font-family: "Bungee", sans-serif;
   color: var(--primary-color);
   margin-bottom: 2rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  display: block;
 }
-
 .songs-box {
   display: flex;
   justify-content: center;
   width: 80vw;
-  margin: 0; /* Center the songs-box horizontally */
+  margin: 0;
 }
-
 .songs-wrapper iframe {
   border-radius: 12px;
   max-width: 100%;
@@ -208,53 +250,24 @@ footer {
   margin-top: 3rem;
   border-radius: var(--radius) var(--radius) 0 0;
 }
-
 .social-links {
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-top: 0.5rem;
 }
-
 .social-link {
   color: var(--white);
   font-size: 2rem;
   transition: transform var(--transition), color var(--transition);
   display: inline-block;
 }
-
 .social-link:hover {
   color: var(--accent-color);
   transform: scale(1.18) rotate(-8deg);
 }
 
-/* Add this for main-content background image */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Align content to the right */
-  margin: 0 7%;
-  position: relative;
-  z-index: 2;
-}
-
-/* Keep name-heading on right, Bio directly below */
-.name-heading {
-  order: 1;
-  align-self: flex-end;
-  text-align: right;
-  margin-top: 2rem;
-}
-
-.Bio {
-  order: 2;
-  align-self: flex-end;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  /* ...other styles remain... */
-}
-
-/* Responsive adjustments */
+/* --- RESPONSIVE --- */
 @media (max-width: 900px) {
   .main-content {
     align-items: center;
@@ -264,45 +277,88 @@ footer {
   .Bio {
     align-self: center;
     text-align: center;
-    margin: 2rem auto 0 auto;
+    margin: 2rem auto;
+    min-width: unset;
+    width: 90vw;
+    max-width: 500px;
   }
-}
-
-@media (max-width: 768px) {
-  nav .container {
-    padding: 1rem 4vw;
+  .bio-header {
+    justify-content: center;
+  }
+  .songs,
+  .songs-box {
+    width: 98vw;
+    padding: 2rem 1vw;
+  }
+  .songs h2{
+    margin : 0;
   }
   .page-links {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    background: var(--white);
-    padding: 1rem;
-    position: absolute;
-    right: 5%;
-    top: 70px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    display: none !important;
   }
-
-  .page-links.active {
-    display: flex;
-  }
-
   .menu-toggle {
     display: block;
-    cursor: pointer;
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-left: 1rem;
   }
-  .songs-box {
-    padding: 1rem;
+  .sidebar {
+    left: -220px;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .Bio a{
+    font-size: 1rem;
+    width: 50vw;
   }
 }
+/* 
+@media (max-width: 600px) {
+  .name-heading h1 {
+    font-size: 2.2rem;
+  }
+  .Bio {
+    padding: 1.2rem 1rem;
+    max-width: 98vw;
+  }
+  .bio-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .songs-wrapper iframe {
+    width: 98vw;
+    height: 220px;
+  }
+  .songs-box {
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    padding: 0;
+  }
+  .songs {
+    padding: 1rem 0.5vw;
+  }
+  nav .container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5vw;
+  }
+} */
 
-@media (min-width: 769px) {
+/* Desktop nav links and hide sidebar/hamburger */
+@media (min-width: 901px) {
+  .page-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    position: static;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
   .menu-toggle {
-    display: none;
+    display: none !important;
+  }
+  .sidebar {
+    display: none !important;
   }
 }
