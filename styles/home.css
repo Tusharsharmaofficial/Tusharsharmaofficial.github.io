@@ -92,6 +92,7 @@ nav .container {
   border: none;
   z-index: 1100;
 }
+
 /*Side Bar Section*/
 .sidebar {
   position: fixed;
@@ -141,8 +142,7 @@ nav .container {
   cursor: pointer;
   z-index: 1300;
 }
-
-/* HERO HEADING & BIO */
+/*Overlay*/
 .overlay {
   position: fixed;
   top: 0;
@@ -161,6 +161,7 @@ nav .container {
   visibility: visible;
 }
 
+/* HERO HEADING & BIO */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -313,7 +314,7 @@ footer {
     align-items: center;
     margin: 0 2vw;
   }
-  .name-heading{
+  .name-heading {
     align-self: right;
     text-align: right;
     min-width: unset;
