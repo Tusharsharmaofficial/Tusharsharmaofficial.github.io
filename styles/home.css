@@ -352,4 +352,15 @@ footer {
   .sidebar.active {
     right: 0;
   }
+  footer {
+    padding: 1rem 0;
+  }
+
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-link {
+    font-size: 1.75rem;
+  }
 }

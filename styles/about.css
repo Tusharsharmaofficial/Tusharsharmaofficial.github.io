@@ -301,4 +301,15 @@ footer {
   nav .container {
     padding: 1rem 1.5rem;
   }
+  footer {
+    padding: 1rem 0;
+  }
+
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-link {
+    font-size: 1.75rem;
+  }
 }
