@@ -20,88 +20,97 @@
     <header>
       <nav>
         <div class="container">
-          <a href="index.html" class="logo"
-            ><img src="assets/logo.jpg" alt="Tushar Sharma"
-          /></a>
+          <a href="index.html" class="logo">
+            <img src="assets/logo.jpg" alt="Tushar Sharma" />
+          </a>
           <ul class="page-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Songs</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" class="active">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
           <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <aside class="sidebar" id="sidebar">
-          <ul class="page-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Songs</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </aside>
       </nav>
     </header>
+
+    <!-- Sidebar overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="close-btn" id="closeBtn" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="page-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Songs</a></li>
+        <li><a href="#" class="active">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </aside>
 
     <main>
       <div class="about-box">
         <h2>About</h2>
         <div class="about-para">
-        <p>
-          Hello this is Tushar Sharma – a singer, anchor, host, voice-over
-          artist, and performer who lives and breathes music. For me, music is a
-          way to connect, inspire, and share emotions.
-        </p>
-        <p>
-          Along with singing, I also shine as an anchor and presenter, bringing
-          passion and energy to every stage. Off stage, I’m a medical student,
-          blending compassion with creativity – a journey of medicine and
-          melodies.
-        </p>
-        <p>
-          On YouTube and social media, I share songs, covers, and creative
-          videos, vlogs, building a growing community of listeners. This is just
-          the beginning of my musical journey!
-        </p>
-        <p>
-          If you love music with heart and energy, you’re in the right place.
-          Let’s vibe together!
-        </p>
+          <p>
+            Hello this is Tushar Sharma – a singer, anchor, host, voice-over
+            artist, and performer who lives and breathes music. For me, music is a
+            way to connect, inspire, and share emotions.
+          </p>
+          <p>
+            Along with singing, I also shine as an anchor and presenter, bringing
+            passion and energy to every stage. Off stage, I'm a medical student,
+            blending compassion with creativity – a journey of medicine and
+            melodies.
+          </p>
+          <p>
+            On YouTube and social media, I share songs, covers, and creative
+            videos, vlogs, building a growing community of listeners. This is just
+            the beginning of my musical journey!
+          </p>
+          <p>
+            If you love music with heart and energy, you're in the right place.
+            Let's vibe together!
+          </p>
         </div>
       </div>
     </main>
 
     <footer>
-        <div class="copyright-text">
-        <p>Tushar Sharma Official &copy; 2025 | Website by <a href="https://www.linkedin.com/in/sumit-sharma-8a22062b8/">Sumit Sharma</a></p>
+      <div class="social-links">
+        <a
+          href="https://youtube.com/@tusharsharmaofficial8721"
+          class="social-link"
+          target="_blank"
+          aria-label="YouTube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/singer_tushar9558?igsh=cjIwYmxzcHpjZ3Fi"
+          class="social-link"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/share/1CpAx4uTkR/"
+          class="social-link"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
       </div>
-      <div>
-        <div class="social-links">
-          <a
-            href="https://youtube.com/@tusharsharmaofficial8721"
-            class="social-link"
-            target="_blank"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/singer_tushar9558?igsh=cjIwYmxzcHpjZ3Fi"
-            class="social-link"
-            target="_blank"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/share/1CpAx4uTkR/"
-            class="social-link"
-            target="_blank"
-          >
-            <i class="fab fa-facebook"></i>
-          </a>
-        </div>
+      <div class="copyright-text">
+        <p>Tushar Sharma Official &copy; 2025 | Website by <a href="https://www.linkedin.com/in/sumit-sharma-8a22062b8/" target="_blank">Sumit Sharma</a></p>
       </div>
     </footer>
+    <script src="scripts/about.js"></script>
   </body>
-  <script src="scripts/about.js"></script>
 </html>
