@@ -14,53 +14,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body>
     <header>
       <nav>
         <div class="container">
-          <a href="#" class="logo"
+          <a href="index.html" class="logo"
             ><img src="assets/logo.jpg" alt="Tushar Sharma"
           /></a>
+          <!-- Desktop navigation -->
           <ul class="page-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Songs</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
           </ul>
-          <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <!-- Hamburger menu button -->
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <aside class="sidebar" id="sidebar">
-          <ul class="page-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Songs</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </aside>
       </nav>
     </header>
 
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="close-btn" id="closeBtn">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="page-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="songs.html">Songs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </aside>
+
     <main>
+     <div class="overlay" id="overlay"></div>
       <div class="main-content">
         <div class="name-heading">
           <h1>Tushar Sharma</h1>
         </div>
-        <div class="Bio">
-          <!-- <div class="bio-header">
-            <img src="assets/logo.jpg" alt="Tushar Sharma" class="bio-avatar" />
-            <h2>BIO</h2>
-          </div> -->
+        <div class="bio">
           <p>
             Hello, I'm Tushar Sharma – a singer, anchor, host, voice-over
             artist, and performer who......
           </p>
-          <!-- <button type="button" onclick="window.location.href='#'">
-            Read full bio
-          </button> -->
           <a href="about.html">Read full bio</a>
         </div>
       </div>
@@ -84,7 +88,14 @@
     </main>
     <footer>
       <div class="copyright-text">
-        <p>Tushar Sharma Official &copy; 2025 | Website by <a href="https://www.linkedin.com/in/sumit-sharma-8a22062b8/">Sumit Sharma</a></p>
+        <p>
+          Tushar Sharma Official &copy; 2025 | Website by
+          <a
+            href="https://www.linkedin.com/in/sumit-sharma-8a22062b8/"
+            target="_blank"
+            >Sumit Sharma</a
+          >
+        </p>
       </div>
       <div>
         <div class="social-links">
@@ -113,5 +124,5 @@
       </div>
     </footer>
   </body>
-  <script src="scripts/home.js"></script>
+  <script src="scripts/contact.js"></script>
 </html>

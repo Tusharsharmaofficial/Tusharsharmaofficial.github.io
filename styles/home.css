@@ -20,7 +20,7 @@
 
 body {
   font-family: "Bungee", "Montserrat", sans-serif;
-  background: url("/assets/backdrop.jpeg") no-repeat center top /cover,
+  background: url("/assets/backdrop.jpeg") no-repeat center top / cover,
     linear-gradient(120deg, #e2eafc 0%, #fff 100%);
   min-height: 100vh;
   color: var(--primary-color);
@@ -74,8 +74,6 @@ nav .container {
   background: var(--primary-color);
   color: var(--white);
 }
-
-/* Hamburger menu icon */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -86,30 +84,29 @@ nav .container {
   border: none;
   z-index: 1100;
 }
-
-/* Sidebar styles */
+/*Side Bar Section*/
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
-  width: 220px;
+  right: -270px; /* Changed from left to right */
+  width: 250px;
   height: 100vh;
   background: var(--white);
-  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
-  transition: left var(--transition);
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
+  transition: right var(--transition); /* Changed from left to right */
   z-index: 1200;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem;
 }
+
 .sidebar.active {
-  left: 0;
+  right: 0;
 }
 .sidebar .page-links {
+  display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  display: flex;
 }
+
 .sidebar .page-links a {
   font-size: 1.15rem;
   color: var(--primary-color);
@@ -124,7 +121,38 @@ nav .container {
   color: var(--white);
 }
 
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  z-index: 1300;
+}
+
 /* HERO HEADING & BIO */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 1100;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -151,7 +179,7 @@ nav .container {
   letter-spacing: 2px;
   margin-bottom: 0;
 }
-.Bio {
+.bio {
   order: 2;
   align-self: flex-end;
   margin: 0.5rem 1.5rem 2rem 0;
@@ -168,33 +196,19 @@ nav .container {
   z-index: 2;
   backdrop-filter: blur(2px);
 }
-.bio-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-.bio-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  object-fit: cover;
-  border: 2px solid var(--highlight);
-}
-.Bio h2 {
+.bio h2 {
   font-family: "Bungee", sans-serif;
   color: var(--primary-color);
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin: 0;
 }
-.Bio p {
+.bio p {
   margin-bottom: 0.5rem;
   font-size: 1.08rem;
   color: #444;
 }
-.Bio a {
+.bio a {
   text-decoration: none;
   font-family: "Bungee", sans-serif;
   font-size: 1.08rem;
@@ -202,10 +216,10 @@ nav .container {
   color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  
   width: 12vw;
 }
-.Bio a:hover, .Bio a:focus {
+.bio a:hover,
+.bio a:focus {
   transform: scale(105%);
 }
 
@@ -256,13 +270,14 @@ footer {
   align-content: center;
   flex-direction: column;
   gap: 0.3rem;
+  bottom: 0px;
 }
-.copyright-text{
-    padding-top: 0.5rem;
+.copyright-text {
+  padding-top: 0.5rem;
 }
-.copyright-text a{
-    text-decoration: none;
-    color: #686d77;
+.copyright-text a {
+  text-decoration: none;
+  color: #686d77;
 }
 
 .social-links {
@@ -283,98 +298,40 @@ footer {
   transform: scale(1.18) rotate(-8deg);
 }
 
-/* --- RESPONSIVE --- */
+/*RESPONSIVE*/
 @media (max-width: 900px) {
   .main-content {
     align-items: center;
     margin: 0 2vw;
   }
   .name-heading,
-  .Bio {
+  .bio {
     align-self: center;
     text-align: center;
     margin: 2rem auto;
     min-width: unset;
     width: 90vw;
     max-width: 500px;
+    font-size: auto;
   }
-  .bio-header {
-    justify-content: center;
+  .bio a {
+    min-width: 200px;
   }
   .songs,
   .songs-box {
     width: 98vw;
     padding: 2rem 1vw;
   }
-  .songs h2{
-    margin : 0;
+  .songs h2 {
+    margin: 0;
   }
-  .page-links {
+  .container .page-links {
     display: none !important;
   }
   .menu-toggle {
     display: block;
   }
-  .sidebar {
-    left: -220px;
-  }
   .sidebar.active {
-    left: 0;
-  }
-  .Bio a{
-    font-size: 1rem;
-    width: 50vw;
-  }
-}
-/* 
-@media (max-width: 600px) {
-  .name-heading h1 {
-    font-size: 2.2rem;
-  }
-  .Bio {
-    padding: 1.2rem 1rem;
-    max-width: 98vw;
-  }
-  .bio-header {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  .songs-wrapper iframe {
-    width: 98vw;
-    height: 220px;
-  }
-  .songs-box {
-    flex-direction: column;
-    align-items: center;
-    width: 98vw;
-    padding: 0;
-  }
-  .songs {
-    padding: 1rem 0.5vw;
-  }
-  nav .container {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem 0.5vw;
-  }
-} */
-
-/* Desktop nav links and hide sidebar/hamburger */
-@media (min-width: 901px) {
-  .page-links {
-    display: flex !important;
-    flex-direction: row;
-    gap: 1rem;
-    position: static;
-    background: none;
-    padding: 0;
-    box-shadow: none;
-  }
-  .menu-toggle {
-    display: none !important;
-  }
-  .sidebar {
-    display: none !important;
+    right: 0;
   }
 }
