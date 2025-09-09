@@ -209,6 +209,8 @@ main {
   /* margin-top: 1rem ; */
   line-height: 1.7rem;
 }
+
+
 /* FOOTER */
 footer {
   font-family: "Story-script";
@@ -252,14 +254,6 @@ footer {
   color: var(--accent-color);
   transform: scale(1.18) rotate(-8deg);
 }
-
-/* RESPONSIVE DESIGN */
-/* @media (max-width: 1200px) {
-  .about-box {
-    width: min(50vw, 550px);
-    margin-right: 1.5rem;
-  }
-} */
 
 @media (max-width: 900px) {
   .empty-box {
@@ -308,100 +302,3 @@ footer {
     padding: 1rem 1.5rem;
   }
 }
-/* 
-@media (max-width: 600px) {
-  .about-box {
-    width: calc(100vw - 1rem);
-    margin: 0 0.5rem;
-    padding: 2rem 1.5rem;
-  }
-
-  .about-box h2 {
-    font-size: 1.8rem;
-  }
-
-  .about-box .about-para {
-    font-size: 0.95rem;
-    gap: 1.2rem;
-  }
-
-  nav .container {
-    padding: 1rem;
-  }
-
-  .sidebar {
-    width: 100vw;
-    right: -100vw;
-  }
-
-  footer {
-    padding: 1.5rem 1rem;
-  }
-
-  .social-links {
-    gap: 1.5rem;
-  }
-
-  .social-link {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .about-box {
-    padding: 1.5rem 1rem;
-  }
-
-  .about-box h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-box .about-para {
-    font-size: 0.9rem;
-    gap: 1rem;
-  }
-} */
-
-/* Desktop nav links and hide sidebar/hamburger */
-/* @media (min-width: 901px) {
-  nav .page-links {
-    display: flex !important;
-    flex-direction: row;
-    gap: 1rem;
-    position: static;
-    background: none;
-    padding: 0;
-    box-shadow: none;
-  }
-
-  .menu-toggle {
-    display: none !important;
-  }
-
-  .sidebar,
-  .sidebar-overlay {
-    display: none !important;
-  }
-} */
-
-/* Animation for content loading */
-/* .about-box {
-  animation: slideInFromRight 0.8s ease-out;
-}
-
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-} */
-
-/* Smooth transitions for all interactive elements */
-/* * {
-  transition: color var(--transition), background var(--transition),
-    transform var(--transition);
-} */

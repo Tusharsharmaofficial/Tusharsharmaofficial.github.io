@@ -14,22 +14,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body>
     <header>
       <nav>
         <div class="container">
-          <a href="index.html" class="logo">
-            <img src="assets/logo.jpg" alt="Tushar Sharma" />
-          </a>
+          <a href="index.html" class="logo"
+            ><img src="assets/logo.jpg" alt="Tushar Sharma"
+          /></a>
+          <!-- Desktop navigation -->
           <ul class="page-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#" class="active">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="songs.html">Songs</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="active">Contact</a></li>
           </ul>
-          <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <!-- Hamburger menu button -->
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -46,37 +48,59 @@
       </button>
       <ul class="page-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#" class="active">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="songs.html">Songs</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="active">Contact</a></li>
       </ul>
     </aside>
 
     <main>
-      <div class="empty-box"></div>
-      <div class="about-box">
-        <h2>About</h2>
-        <div class="about-para">
-          <p>
-            Hello this is Tushar Sharma – a singer, anchor, host, voice-over
-            artist, and performer who lives and breathes music. For me, music is
-            a way to connect, inspire, and share emotions.
-          </p>
-          <p>
-            Along with singing, I also shine as an anchor and presenter,
-            bringing passion and energy to every stage. Off stage, I’m a medical
-            student, blending compassion with creativity – a journey of medicine
-            and melodies.
-          </p>
-          <p>
-            On YouTube and social media, I share songs, covers, and creative
-            videos, vlogs, building a growing community of listeners. This is
-            just the beginning of my musical journey!
-          </p>
-          <p>
-            If you love music with heart and energy, you’re in the right place.
-            Let’s vibe together!
-          </p>
+      <div class="contact-title">
+        <h1>CONTACT</h1>
+      </div>
+      <div class="main-content">
+        <div class="top-text">
+          <h2>Get in Touch</h2>
+        </div>
+        <div>
+          <form action="PUSH" class="form-class">
+            <div class="contact-form">
+              <div class="name-box form-item">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" />
+              </div>
+              <div class="email-box form-item">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="subject-box form-item">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="message-box form-item">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">SUBMIT</button>
+          </form>
+        </div>
+        <div class="email-id">
+          <h2>Contact : tusharsharma@gmail.com</h2>
         </div>
       </div>
     </main>
@@ -118,6 +142,6 @@
         </div>
       </div>
     </footer>
-    <script src="scripts/about.js"></script>
   </body>
+  <script src="scripts/contact.js"></script>
 </html>
