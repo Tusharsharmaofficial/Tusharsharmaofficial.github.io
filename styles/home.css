@@ -19,11 +19,19 @@
 }
 
 body {
-  font-family: "Bungee", "Montserrat", sans-serif;
+  font-family: "Bungee", "Montserrat", "sans-serif";
   background: url("/assets/backdrop.jpeg") no-repeat center top / cover,
     linear-gradient(120deg, #e2eafc 0%, #fff 100%);
   min-height: 100vh;
-  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content wrapper */
+main {
+  flex: 1; /* This makes main content take up remaining space */
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAVBAR */
@@ -264,13 +272,14 @@ footer {
   padding: 1.5rem 0;
   text-align: center;
   color: var(--white);
-  margin-top: 3rem;
+  margin-top: auto; /* Changed from margin-top: 3rem */
+  width: 100%;
+  position: relative; /* Changed from bottom: 0px */
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
   gap: 0.3rem;
-  bottom: 0px;
 }
 .copyright-text {
   padding-top: 0.5rem;
@@ -304,7 +313,14 @@ footer {
     align-items: center;
     margin: 0 2vw;
   }
-  .name-heading,
+  .name-heading{
+    align-self: right;
+    text-align: right;
+    min-width: unset;
+    width: 90vw;
+    max-width: 500px;
+    font-size: auto;
+  }
   .bio {
     align-self: center;
     text-align: center;
