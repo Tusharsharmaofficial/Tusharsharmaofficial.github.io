@@ -34,3 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// let song = {
+//   0 : '/assets/songs/1.jpg',
+//   1 : '/assets/songs/2.jpg',
+//   2 : '/assets/songs/3.jpg'
+// }
+// let songs = document.getElementsByClassName("song");
+
+// for(let i = 0; i<3; i++){
+//   songs[i].style.background = `
+//     url(${song[i]}) no-repeat center top / cover`;
+// }

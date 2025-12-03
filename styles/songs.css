@@ -176,12 +176,40 @@ main {
   font-family: "Bungee", "Story-script";
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   color: var(--accent-color);
   align-items: center;
   font-size: 250%;
 }   
+.main-heading{
+  padding: 50px 0px;
+}
 
+
+main .container{
+  height : auto;
+  width : 80vw;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding : 30px;
+  gap : 30px;
+  border-radius: 1em;
+}
+
+.song{
+  height : 40vh;
+  width : 35vw;
+  border-radius: 1em;
+  contain: content;
+}
+
+.song iframe{
+  height : 100%;
+  width : 100%; 
+}
 /* FOOTER */
 footer {
   font-family: "Story-script";
