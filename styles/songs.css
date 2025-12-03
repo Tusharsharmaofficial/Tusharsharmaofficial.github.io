@@ -200,8 +200,8 @@ main {
 }
 
 .song{
-  height : 40vh;
   width : 35vw;
+  aspect-ratio: 16 / 9;
   border-radius: 1em;
   contain: content;
   transition: transform 0.2s ease;
@@ -214,6 +214,7 @@ main {
 .song iframe{
   height : 100%;
   width : 100%; 
+  display: block;
 }
 /* FOOTER */
 footer {
@@ -287,6 +288,13 @@ footer {
     font-size: 180%;
     min-height: calc(100vh - 70px);
   }
+  /* .songs{
+    min-height: 60%;
+  } */
+  .song{
+    width: 95%;
+  }
+
 
   /* Footer Adjustments */
   footer {
@@ -314,6 +322,16 @@ footer {
     padding: 1rem;
     font-size: 150%;
     text-align: center;
+    min-height: calc(100vh - 60px);
+  }
+
+  /* Main  */
+  .songs{
+    padding: 20px 10px;
+  }
+
+  .song{
+    width : 95%;
   }
 
   /* Footer */
@@ -332,12 +350,5 @@ footer {
 
   .social-link {
     font-size: 1.5rem;
-  }
-}
-
-@media (max-height: 600px) {
-  main {
-    padding: 1rem;
-    min-height: calc(100vh - 60px);
   }
 }
