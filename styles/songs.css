@@ -186,7 +186,7 @@ main {
 }
 
 
-main .container{
+.songs{
   height : auto;
   width : 80vw;
   background-color: #fff;
@@ -204,6 +204,11 @@ main .container{
   width : 35vw;
   border-radius: 1em;
   contain: content;
+  transition: transform 0.2s ease;
+}
+.song:hover{  
+  box-shadow: 10px 10px 10px grey;
+  transform: scale(1.05);
 }
 
 .song iframe{
