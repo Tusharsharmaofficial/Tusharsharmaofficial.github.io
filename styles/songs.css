@@ -288,9 +288,7 @@ footer {
     font-size: 180%;
     min-height: calc(100vh - 70px);
   }
-  /* .songs{
-    min-height: 60%;
-  } */
+  
   .song{
     width: 95%;
   }
