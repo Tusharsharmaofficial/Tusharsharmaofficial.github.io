@@ -35,14 +35,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// let song = {
-//   0 : '/assets/songs/1.jpg',
-//   1 : '/assets/songs/2.jpg',
-//   2 : '/assets/songs/3.jpg'
-// }
-// let songs = document.getElementsByClassName("song");
+let players = [];
 
-// for(let i = 0; i<3; i++){
-//   songs[i].style.background = `
-//     url(${song[i]}) no-repeat center top / cover`;
-// }
+function onYouTubeIframeAPIReady() {
+  const iframes = document.querySelectorAll('.yt');
+
+  iframes.forEach((frame, index) => {
+    players[index] = new YT.Player(frame, {
+      events: {
+        onStateChange: (event) => handleStateChange(event, index)
+      }
+    });
+  });
+}
+
+function handleStateChange(event, index) {
+  if (event.data === YT.PlayerState.PLAYING) {
+    players.forEach((player, i) => {
+      if (i !== index) {
+        player.pauseVideo();
+      }
+    });
+  }
+}
