@@ -364,3 +364,29 @@ footer {
     font-size: 1.75rem;
   }
 }
+
+
+@media (max-width: 600px) {
+  /* Header/Nav */
+  .logo img {
+    height: 45px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1rem 0;
+  }
+
+  .copyright-text {
+    font-size: 1rem;
+    padding-top: 0.3rem;
+  }
+
+  .social-links {
+    gap: 1.2rem;
+  }
+
+  .social-link {
+    font-size: 1.5rem;
+  }
+}

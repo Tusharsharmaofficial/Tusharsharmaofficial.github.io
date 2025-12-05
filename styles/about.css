@@ -313,3 +313,50 @@ footer {
     font-size: 1.75rem;
   }
 }
+
+
+@media (max-width: 600px) {
+  /* Header/Nav */
+  .logo img {
+    height: 45px;
+  }
+
+  /* Main Content */
+  main {
+    padding: .8rem;
+    font-size: 150%;
+    text-align: center;
+    min-height: calc(100vh - 60px);
+  }
+
+  /* Main  */
+  .songs{
+    padding: 20px 10px;
+  }
+
+  .song{
+    width : 95%;
+  }
+
+  .about-box{
+    padding-left: 2rem;
+    padding-right : 0;
+  }
+  /* Footer */
+  footer {
+    padding: 1rem 0;
+  }
+
+  .copyright-text {
+    font-size: 1rem;
+    padding-top: 0.3rem;
+  }
+
+  .social-links {
+    gap: 1.2rem;
+  }
+
+  .social-link {
+    font-size: 1.5rem;
+  }
+} 
